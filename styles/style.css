@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: fantasy;
+}
+
+
+/* for small screen */
+
+/* breadcrumb and his elements*/
+
+/* breadcrumb */
+
+.breadcrumb {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    background-color: aquamarine;
+}
+
+/* breadcrumb-input */
+
+.breadcrumb-input {
+    display: none;
+}
+
+.breadcrumb-input:checked ~ .logo-and-label > .label-breadcrumb-input > .breadcrumb-input-close {
+    transform: rotate(45deg);
+    background-color: transparent;
+    transition: 0.9s;
+}
+
+.breadcrumb-input:checked ~ .logo-and-label > .label-breadcrumb-input > .breadcrumb-input-close::before {
+    transform: rotate(45deg);
+    background-color: transparent;
+    transition: 0.9s;
+}
+
+.breadcrumb-input:checked ~ .logo-and-label > .label-breadcrumb-input > .breadcrumb-input-close::after {
+    transform: rotate(45deg);
+    background-color: transparent;
+    transition: 0.9s;
+}
+
+.breadcrumb-input:checked ~ .logo-and-label > .label-breadcrumb-input > .breadcrumb-input-open::before {
+    background-color: white;
+    top: -6px;
+    transform: rotate(45deg) translate(3px, 5px);
+    transition: 0.9s;
+}
+
+.breadcrumb-input:checked ~ .logo-and-label > .label-breadcrumb-input > .breadcrumb-input-open::after {
+    background-color: white;
+    top: 6px;
+    transform: rotate(-45deg) translate(3px, -5px);
+    transition: 0.9s;
+}
+
+.breadcrumb-input:checked ~ .logo-and-label ~ .breadcrumb-links {
+    display: flex;
+}
+
+/* logo-and-label */
+
+.logo-and-label {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+
+/* label-breadcrumb-input */
+
+.label-breadcrumb-input {
+    display: flex;
+}
+
+/* breadcrumb-input-close */
+
+.breadcrumb-input-close {
+    display: flex;
+    flex-direction: column;
+    height: 1px;
+    width: 25px;
+    background-color: white;
+    margin: 10px 0 0 0;
+    position: relative;
+}
+
+.breadcrumb-input-close::before {
+    content: "";
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    margin: 0 5px 0 0;
+    background-color: white;
+    position: absolute;
+    top: -6px;
+}
+
+.breadcrumb-input-close::after {
+    content: "";
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    margin: 0 5px 0 0;
+    background-color: white;
+    position: absolute;
+    top: 6px;
+}
+
+/* breadcrumb-input-open */
+
+.breadcrumb-input-open {
+    display: flex;
+    flex-direction: column;
+    height: 1px;
+    width: 25px;
+    background-color: transparent;
+    margin: 10px 0 0 0;
+    position: absolute;
+}
+
+.breadcrumb-input-open::before {
+    content: "";
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    position: absolute;
+}
+
+.breadcrumb-input-open::after {
+    content: "";
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    position: absolute;
+}
+
+/* breadcrumb-links */
+
+.breadcrumb-links {
+    display: none;
+    flex-direction: column;
+    padding: 0 16px;
+    list-style: none;
+}
+
+/* breadcrumb-link */
+
+.breadcrumb-link {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.breadcrumb-link:hover {
+    color: white;
+}
+
+/* for big screen */
+
+@media screen and (min-width:768px) {
+
+    /* breadcrumb and his elements*/
+
+    .breadcrumb,
+    .breadcrumb-links,
+    .breadcrumb-link {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+   /* label-breadcrumb-input */
+
+   .label-breadcrumb-input {
+       display:none;
+   }
+
+   /* breadcrumb-links */
+   .breadcrumb-links {
+       display: flex;
+       padding: 0;
+   }
+
+   .breadcrumb-link {
+       padding: 0 16px;
+   }
+
+}
