@@ -176,6 +176,85 @@
     transition: 0.9s;
 }
 
+/* services */
+
+.service {
+    display: flex;
+    flex-direction: column;
+}
+
+/* service-btn */
+
+.service-btn {
+    display: none;
+}
+
+.service-btn:checked ~ .label-service-btn > .service-icon {
+    background-color: white;
+    transition: 0.9s;
+}
+
+.service-btn:checked ~ .label-service-btn > .service-icon::before {
+    background-color: transparent;
+    transition: 0.9s;
+}
+
+.service-btn:checked ~ .label-service-btn ~ .service-links {
+    display: flex;
+}
+
+/* label-service-btn */
+
+.label-service-btn {
+    display:flex;
+    justify-content: space-between;
+}
+
+.label-service-btn:hover {
+    color: white;
+    transition: 0.9s;
+}
+
+/* service-text */
+
+.service-text {
+    padding: 0 16px;
+}
+
+/* service-icon */
+
+.service-icon {
+    display: flex;
+    flex-direction: column;
+    height: 2px;
+    width: 10px;
+    background-color: black;
+    margin: 12px 0 0 0; 
+    position: relative;
+    transition: 0.9s;
+}
+
+.service-icon::before {
+    content: "";
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    top: -6px;
+    transform: rotate(90deg) translate(6px, 0);
+    transition: 0.9s;
+}
+
+/* service-links */
+
+.service-links {
+    display: none;
+    flex-direction: column;
+    list-style: none;
+}
+
 /* for big screen */
 
 @media screen and (min-width:768px) {
@@ -200,6 +279,7 @@
    }
 
    /* breadcrumb-links */
+
    .breadcrumb-links {
        display: flex;
        padding: 0;
@@ -207,6 +287,20 @@
 
    .breadcrumb-link {
        padding: 0 16px;
+   }
+
+   /* service-links */
+
+   .service-links {
+       position: absolute;
+       padding: 15px 0;
+       background-color: aquamarine;
+   }
+
+   /* service-links breadcrumb-link */
+
+   .service-links .breadcrumb-link {
+       padding: 16px;
    }
 
 }
