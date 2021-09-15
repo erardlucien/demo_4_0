@@ -176,11 +176,10 @@
     transition: 0.9s;
 }
 
-/* services */
+/* services > breadcrumb-link */
 
-.service {
-    display: flex;
-    flex-direction: column;
+.services > .breadcrumb-link {
+    display: none;
 }
 
 /* service-btn */
@@ -287,6 +286,24 @@
 
    .breadcrumb-link {
        padding: 0 16px;
+   }
+
+   /* services */
+
+   .services:hover .service-links {
+       display: flex;
+   }
+
+   /* services > breadcrumb-link */
+
+   .services > .breadcrumb-link {
+       display: flex;
+   }
+
+   /* label-service-btn */
+
+   .label-service-btn {
+       display: none;
    }
 
    /* service-links */
