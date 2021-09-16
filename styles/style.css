@@ -288,24 +288,6 @@
        padding: 0 16px;
    }
 
-   /* services */
-
-   .services:hover .service-links {
-       display: flex;
-   }
-
-   /* services > breadcrumb-link */
-
-   .services > .breadcrumb-link {
-       display: flex;
-   }
-
-   /* label-service-btn */
-
-   .label-service-btn {
-       display: none;
-   }
-
    /* service-links */
 
    .service-links {
