@@ -42,13 +42,15 @@
 
 .breadcrumb-input:checked ~ .logo-and-label > .label-breadcrumb-input > .breadcrumb-input-open::before {
     background-color: black;
-    transform: rotate(45deg) translate(6px, 2px);
+    top: 0;
+    transform: rotate(45deg);
     transition: 0.9s;
 }
 
 .breadcrumb-input:checked ~ .logo-and-label > .label-breadcrumb-input > .breadcrumb-input-open::after {
     background-color: black;
-    transform: rotate(-45deg) translate(6px, -2px);
+    top: 0;
+    transform: rotate(-45deg);
     transition: 0.9s;
 }
 
